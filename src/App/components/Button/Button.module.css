@@ -1,0 +1,20 @@
+.Button {
+    color: #fff;
+    background-color: grey;
+    border-radius: 7px;
+    border: none;
+    font-size: 22px;
+    font-weight: 500;
+    margin-right: 32px;
+    padding: 15px 30px;
+}
+/* .Button:hover {
+    border: blue 5px solid;
+} */
+.clicked {
+    border: 1px blue double !important;
+    box-shadow: 0 0 10px black;
+}
+.hover {
+    border: 10px black solid;
+}
