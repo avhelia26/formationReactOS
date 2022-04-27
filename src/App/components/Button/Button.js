@@ -8,7 +8,6 @@ const Button=(props)=>{
     const [isHover, setHover] = useState(false);
 
     useEffect(() => {
-        console.log("update du state",isClicked)
     //   return () => {
     //     effect
     //   };
@@ -25,7 +24,7 @@ const Button=(props)=>{
     style={{color:props.color, backgroundColor:props.bgColor}}
     onClick={(evt)=>{
         setClicked(true);
-
+        props.onButtonClick('Hello');
     }}
     onMouseEnter={()=>{setHover(true)}}
     onMouseLeave={()=>{setHover(false)}}
@@ -39,8 +38,9 @@ const Button=(props)=>{
 Button.propTypes={
     bgColor: PropTypes.string.isRequired,
     color: PropTypes.string.isRequired,
+    onButtonClick: PropTypes.func.isRequired,
 }
-Button.defaultProps={
-    bgColor: 'grey',
-}
+// Button.defaultProps={
+//     bgColor: 'grey',
+// }
 export default Button;
