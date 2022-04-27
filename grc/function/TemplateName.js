@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
-import style from '.TemplateName.module.scss'
+import style from './TemplateName.module.scss'
 
 export const templateNameInitialState ={};
 
-const TemplateName = props => {
+const TemplateName = (props) => {
     const [state, setstate] = useState(templateNameInitailState)
     useEffect(() => {
       return () => {

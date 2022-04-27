@@ -1,48 +1,50 @@
-import React from 'react';
-import Button from './components/Button/Button';
-import './App.css'
+import React, { useState } from 'react'
+import PropTypes from 'prop-types'
+import FlexH from './components/layout/FlexH/FlexH'
+import FlexW from './components/layout/FlexW/FlexW'
+import MemeSvgViewer from './components/ui/MemeSvgViewer/MemeSvgViewer'
+import Navbar from './components/ui/Navbar/Navbar'
 
-class App extends React.Component{
-  constructor(props){
-    super(props);
-    this.state={
-      compteur:0,
-      uneData:"bonjour",
-    };
-  }
-  componentDidMount(){
-    console.log("le composant est monté");
-  }
-componentDidUpdate(prevProps, prevState){
-  console.log(prevProps,this.props);
-  console.log("%c%s","color:red","-------------")
-  console.log(prevState,this.state);
+const appInitialState = {
+  meme: {
+    text: "le react c'est cool",
+    x:20,
+    y:20,
+    fontSize: 20,
+    fontWeight: 700,
+    color:"#ACB0A1",
+    imageId:0,
+    underline: true,
+    italic:false,
+    name:"mon 1er meme",
+  },
+  images: [
+    {
+      id:0,
+      name:'image',
+      url:'image2.jpeg',
+      w:1200,
+      h:900,
+    }
+  ]
 }
-  render(){
-    return (
-    <div className="App" data-testid="App">
-      <div>Valeur du compteur: {this.state.compteur}</div>
-      <Button 
-        bgColor='skyblue' 
-        onButtonClick={()=>{
-          this.setState({compteur:this.state.compteur+1})
-          console.log(this.state.compteur);
-          }}>          
-          +1
-      </Button>
-      <Button 
-        bgColor='tomato'
-        onButtonClick={()=>{
-          if(this.state.compteur>0){
-            this.setState({compteur:this.state.compteur-1})
-            console.log(this.state.compteur)
-          }
-        }}
-      >
-        -1
-      </Button>
+function App(props) {
+  const [state, setstate] = useState( appInitialState )
+  return (
+    <div className="App" style={{height:'90vh'}}>
+      <Navbar/>
+      <FlexH>
+        <FlexW>
+        <MemeSvgViewer meme={state.meme} image={state.images.find((img)=>img.id===state.meme.imageId)}/>
+          <div>Editor</div>
+        </FlexW>
+      </FlexH>
+      
+      <div>Footer</div>
     </div>
-    );
-  }
+  )
 }
-export default App;
+
+App.propTypes = {}
+
+export default App

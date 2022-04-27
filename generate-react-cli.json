@@ -22,7 +22,7 @@
       }
     },
     "funcHook": {
-      "path": "src/App/components",
+      "path": "src/App/components/ui",
       "withStyle": true,
       "withTest": true,
       "withStory": true,
@@ -34,13 +34,12 @@
     "layoutfunc": {
       "path": "src/App/components/layout",
       "withStyle": true,
-      "withTest": true,
-      "withStory": true,
+      "withTest": false,
+      "withStory": false,
       "withLazy": false,
       "customTemplates":{
-        "component":"grc/function/TemplateName.js"
+        "component":"grc/layoutfunc/TemplateName.tsx"
       }
-    },
-
+    }
   }
 }
