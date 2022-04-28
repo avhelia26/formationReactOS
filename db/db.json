@@ -1,0 +1,46 @@
+{
+  "memes": [
+    {
+      "id": "0",
+      "text": "le react c'est cool",
+      "x": 20,
+      "y": 20,
+      "fontSize": 20,
+      "fontWeight": 700,
+      "color": "#E2E",
+      "imageId": 0,
+      "underline": true,
+      "italic": false,
+      "name": "mon 1er meme"
+    },
+    {
+      "text": "test",
+      "x": 20,
+      "y": 20,
+      "fontSize": 20,
+      "fontWeight": 700,
+      "color": "#2E2E2E",
+      "imageId": 0,
+      "underline": true,
+      "italic": false,
+      "name": "mon 2eme meme",
+      "id": "0mN_nnS"
+    }
+  ],
+  "images": [
+    {
+      "id": 0,
+      "name": "image",
+      "url": "image2.jpeg",
+      "w": 630,
+      "h": 364
+    },
+    {
+      "id": 1,
+      "name": "image2",
+      "url": "image_3.jpeg",
+      "w": 630,
+      "h": 364
+    }
+  ]
+}

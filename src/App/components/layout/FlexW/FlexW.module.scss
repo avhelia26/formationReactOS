@@ -1,9 +1,9 @@
-.FlexH {
+.FlexW {
     display: flex;
     flex-direction: row;
     height: 100%;
 
 }
-.FlexH>*:nth-child(1){
+.FlexW>*:nth-child(1){
     flex-grow: 1;
 }

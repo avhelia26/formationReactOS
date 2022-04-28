@@ -15,8 +15,8 @@ const MemeSvgViewer = (props) => {
         y={props.meme.y} 
         fontSize={props.meme.fontSize} 
         fontWeight={props.meme.fontWeight} 
-        fill={props.meme.fill} 
-        fontStyle={props.meme.fontStyle?'italic':'normal'} 
+        fill={props.meme.color} 
+        fontStyle={props.meme.italic?'italic':'normal'} 
         textDecoration={props.meme.underline?'underline':'normal'}>
         {props.meme.text}
       </text>
